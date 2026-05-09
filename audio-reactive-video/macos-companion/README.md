@@ -13,7 +13,7 @@ macOS menu bar helper for feeding system audio into the web visualizer without b
 ## Run It
 
 ```bash
-cd /Users/anux/repos/seesound/audio-reactive-video/macos-companion
+cd audio-reactive-video/macos-companion
 swift run
 ```
 
@@ -26,8 +26,7 @@ Then in the web app:
 
 ## Notes
 
-- Current implementation captures the active macOS display's system audio path through `ScreenCaptureKit`.
+- Captures the active macOS display's system audio path through `ScreenCaptureKit`.
 - The bridge is local-only and listens on `127.0.0.1:43821`.
 - PCM streaming uses `127.0.0.1:43822`.
-- This is macOS-only and currently assumes a single-display default capture target.
-- Desktop capture has more latency than file playback because it crosses native capture, local transport, browser ingest, and an AudioWorklet buffer.
+- This is macOS-only and assumes a single-display default capture target.

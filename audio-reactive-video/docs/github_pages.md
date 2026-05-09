@@ -2,7 +2,7 @@
 
 The public web entry is intended to be:
 
-[https://whwhwhat.github.io/seesound/](https://whwhwhat.github.io/seesound/)
+[https://worldtheater.github.io/seesound/](https://worldtheater.github.io/seesound/)
 
 ## How It Works
 
@@ -23,9 +23,7 @@ In GitHub:
 1. Open repository **Settings**.
 2. Open **Pages**.
 3. Set **Build and deployment** source to **GitHub Actions**.
-4. Push to `main` or `dev_web_gpu`.
-
-If you later want only the default branch to publish the public app, remove `dev_web_gpu` from the workflow trigger.
+4. Push to a branch configured in the workflow trigger.
 
 ## Local Verification
 

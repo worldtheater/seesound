@@ -1,6 +1,6 @@
 # Audio Reactive Video
 
-This folder contains the current SeeSound app.
+This folder contains the SeeSound web app and optional macOS companion.
 
 ## Parts
 
@@ -11,7 +11,7 @@ This folder contains the current SeeSound app.
 ## Web App
 
 ```bash
-cd /Users/anux/repos/seesound/audio-reactive-video/web
+cd audio-reactive-video/web
 npm install
 npm run dev
 ```
@@ -32,7 +32,7 @@ npm run preview
 
 `Browser Tab` uses browser screen/tab sharing. Choose a tab and enable audio sharing when prompted.
 
-`Desktop App` uses the macOS companion. It is useful when you need system output, but it has more latency than file playback because audio moves through native capture, local transport, browser ingest, and an AudioWorklet buffer.
+`Desktop App` uses the macOS companion when system output is needed.
 
 ## Visual Modes
 
@@ -41,7 +41,3 @@ npm run preview
 - `Lattice`: a dedicated WebGPU projected spatial wireframe renderer.
 
 When WebGPU is unavailable, the dedicated `Crystal` and `Lattice` renderers may not display; `Spectral` has the broader fallback path.
-
-## Hidden / Deferred Features
-
-The video export UI is currently disabled. The implementation files remain in place so the feature can be repaired later without rediscovering the whole recording path.

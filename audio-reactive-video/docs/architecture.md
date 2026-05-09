@@ -49,7 +49,3 @@ flowchart TB
 - `Desktop App`: the macOS companion captures system audio with `ScreenCaptureKit`, streams PCM over localhost WebSocket, and the browser feeds that data into an `AudioWorklet`.
 
 `File` remains the lowest-latency baseline. Desktop audio is useful, but it has unavoidable capture and bridge stages.
-
-## Current Public Surface
-
-The public web app should expose realtime visualization only. Video export is disabled in the UI until the output quality is good enough to ship.

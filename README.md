@@ -2,13 +2,13 @@
 
 SeeSound is a browser-based audio visualizer that turns music and live audio into resonant geometry. It is inspired by Chladni figures, modal interference, and projected spatial forms.
 
-Live app: [https://whwhwhat.github.io/seesound/](https://whwhwhat.github.io/seesound/)
+Live app: [https://worldtheater.github.io/seesound/](https://worldtheater.github.io/seesound/)
 
-> The live link is served by GitHub Pages from the web app build. After pushing, enable GitHub Pages with **Source: GitHub Actions** in the repository settings if it is not already enabled.
+The live link is served by GitHub Pages from the web app build.
 
-## Current Status
+## Features
 
-The main application lives in [`audio-reactive-video/web`](./audio-reactive-video/web). It currently supports:
+The main application lives in [`audio-reactive-video/web`](./audio-reactive-video/web). It supports:
 
 - Local audio file playback with realtime analysis.
 - Browser tab audio capture through `getDisplayMedia`.
@@ -18,8 +18,6 @@ The main application lives in [`audio-reactive-video/web`](./audio-reactive-vide
   - `Crystal`: harmonic membrane renderer.
   - `Lattice`: projected spatial wireframe renderer.
 - WebGPU rendering where available, with legacy canvas/WebGL fallback paths for the spectral renderer.
-
-Video export is intentionally hidden for now because the current output quality is not good enough to present as a public feature. The related code is kept in the repo for later repair.
 
 ## Run Locally
 
@@ -53,7 +51,7 @@ macOS may ask for Screen Recording permission before system audio can be capture
 
 ## Publish To GitHub Pages
 
-This repo includes a GitHub Actions workflow at [`.github/workflows/pages.yml`](./.github/workflows/pages.yml). On pushes to `main` or the current `dev_web_gpu` branch, it builds `audio-reactive-video/web` and publishes the generated `dist` folder to GitHub Pages.
+This repo includes a GitHub Actions workflow at [`.github/workflows/pages.yml`](./.github/workflows/pages.yml). On each configured publish branch, it builds `audio-reactive-video/web` and publishes the generated `dist` folder to GitHub Pages.
 
 Manual build check:
 
@@ -61,8 +59,6 @@ Manual build check:
 cd audio-reactive-video/web
 npm run build
 ```
-
-If you later want only the default branch to publish the public app, remove `dev_web_gpu` from the workflow branch list.
 
 ## Project Docs
 
