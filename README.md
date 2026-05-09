@@ -2,6 +2,8 @@
 
 SeeSound is a browser-based audio visualizer that turns music and live audio into resonant geometry. It is inspired by Chladni figures, modal interference, and projected spatial forms.
 
+![SeeSound web visualizer screenshot](./screenshot/Screenshot_1.png)
+
 Live app: [https://worldtheater.github.io/seesound/](https://worldtheater.github.io/seesound/)
 
 The live link is served by GitHub Pages from the web app build.
