@@ -15,10 +15,9 @@ The main application lives in [`audio-reactive-video/web`](./audio-reactive-vide
 - Local audio file playback with realtime analysis.
 - Browser tab audio capture through `getDisplayMedia`.
 - Optional macOS desktop audio capture through the local companion app.
-- Three visual modes:
+- Two visual modes:
   - `Spectral`: resonant field / nodal geometry.
   - `Crystal`: harmonic membrane renderer.
-  - `Lattice`: projected spatial wireframe renderer.
 - WebGPU rendering where available, with legacy canvas/WebGL fallback paths for the spectral renderer.
 
 ## Run Locally

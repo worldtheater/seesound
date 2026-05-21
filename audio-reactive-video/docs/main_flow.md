@@ -40,6 +40,5 @@ flowchart TD
 Dedicated visual modes branch before this spectral render plan:
 
 - `Crystal` renders through `render/crystal-webgpu.ts`.
-- `Lattice` renders through `render/lattice-webgpu.ts`.
 
-Both currently depend on WebGPU support.
+The dedicated crystal renderer currently depends on WebGPU support.

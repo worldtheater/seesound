@@ -91,9 +91,6 @@ import {
   primeCrystalRenderer,
 } from "../render/crystal-webgpu";
 import {
-  primeLatticeRenderer,
-} from "../render/lattice-webgpu";
-import {
   requestRender,
 } from "../render/renderer";
 import type {
@@ -410,25 +407,15 @@ function bindEventHandlers() {
     state.visualMode =
       nextMode === "crystal"
         ? "crystal"
-        : nextMode === "lattice"
-          ? "lattice"
-          : "spectral";
+        : "spectral";
     updateSelectLabel(visualModeValue, visualModeSelect);
     syncControlVisibility();
     applyModeCopy();
     statusNode.textContent = state.visualMode === "crystal"
       ? "Crystal mode active. Harmonic membrane rendering is driving the scene."
-      : state.visualMode === "lattice"
-        ? "Lattice mode active. Spatial wireframe projection is driving the scene."
-        : "Spectral mode active. Resonance field rendering is back online.";
+      : "Spectral mode active. Resonance field rendering is back online.";
     if (state.visualMode === "crystal") {
       void primeCrystalRenderer().then(() => {
-        requestRender();
-      });
-      return;
-    }
-    if (state.visualMode === "lattice") {
-      void primeLatticeRenderer().then(() => {
         requestRender();
       });
       return;

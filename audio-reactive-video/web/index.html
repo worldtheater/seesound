@@ -115,21 +115,19 @@
                   <div id="visualModeMenu" class="select-menu" role="listbox" hidden>
                     <button type="button" class="select-option" data-select="visual-mode" data-value="spectral">Spectral</button>
                     <button type="button" class="select-option" data-select="visual-mode" data-value="crystal">Crystal</button>
-                    <button type="button" class="select-option" data-select="visual-mode" data-value="lattice">Lattice</button>
                   </div>
                   <select id="visualModeSelect" class="native-control-hidden">
                     <option value="spectral">Spectral</option>
                     <option value="crystal">Crystal</option>
-                    <option value="lattice">Lattice</option>
                   </select>
                 </div>
-                <small class="control-help">Spectral keeps the resonance field. Crystal becomes a harmonic membrane. Lattice becomes a projected spatial wireframe.</small>
+                <small class="control-help">Spectral keeps the resonance field. Crystal becomes a harmonic membrane.</small>
               </div>
               <div id="themeWrap" class="custom-select">
                 <span>Theme</span>
                 <div class="select-shell">
                   <button id="themeTrigger" class="select-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
-                    <span id="themeValue">Lab Green</span>
+                    <span id="themeValue">Ice Cyan</span>
                     <span class="select-chevron" aria-hidden="true"></span>
                   </button>
                   <div id="themeMenu" class="select-menu" role="listbox" hidden>
@@ -147,7 +145,7 @@
                   <select id="themeSelect" class="native-control-hidden">
                     <option value="lab">Lab Green</option>
                     <option value="amber">Amber Mist</option>
-                    <option value="ice">Ice Cyan</option>
+                    <option value="ice" selected>Ice Cyan</option>
                     <option value="heat">Heatmap</option>
                     <option value="mono">Monochrome</option>
                     <option value="aurora">Aurora Bloom</option>
@@ -165,7 +163,7 @@
                   <button id="lowColorButton" class="color-swatch-button" type="button" aria-label="Choose low color">
                     <span class="color-swatch-fill"></span>
                   </button>
-                  <input id="lowColor" class="native-control-hidden native-color-input" type="color" value="#6c7a2b" />
+                  <input id="lowColor" class="native-control-hidden native-color-input" type="color" value="#1c5458" />
                   <small class="control-help">Bass region tint.</small>
                 </div>
                 <div id="midColorWrap" class="color-swatch-control">
@@ -173,7 +171,7 @@
                   <button id="midColorButton" class="color-swatch-button" type="button" aria-label="Choose mid color">
                     <span class="color-swatch-fill"></span>
                   </button>
-                  <input id="midColor" class="native-control-hidden native-color-input" type="color" value="#bcde48" />
+                  <input id="midColor" class="native-control-hidden native-color-input" type="color" value="#66d6dc" />
                   <small class="control-help">Middle band tint.</small>
                 </div>
                 <div id="highColorWrap" class="color-swatch-control">
@@ -181,7 +179,7 @@
                   <button id="highColorButton" class="color-swatch-button" type="button" aria-label="Choose high color">
                     <span class="color-swatch-fill"></span>
                   </button>
-                  <input id="highColor" class="native-control-hidden native-color-input" type="color" value="#bcf4ff" />
+                  <input id="highColor" class="native-control-hidden native-color-input" type="color" value="#e4faff" />
                   <small class="control-help">Treble region tint.</small>
                 </div>
               </div>
@@ -202,7 +200,7 @@
                 <small class="control-help">Glow emphasizes atmosphere. Isoline reveals the nodal skeleton.</small>
               </div>
               <p id="crystalModeNote" class="mode-label is-hidden">Crystal mode runs on a separate harmonic membrane renderer with its own motion language.</p>
-              <p id="latticeModeNote" class="mode-label is-hidden">Lattice mode is an MVP spatial renderer focused on hypercube-like wireframe motion.</p>
+              <p id="latticeModeNote" class="mode-label is-hidden">Lattice mode is unavailable in this build.</p>
               <label id="latticePerspectiveWrap" class="control-toggle is-hidden">
                 <span>Perspective projection</span>
                 <input id="latticePerspectiveEnabled" type="checkbox" checked />
@@ -417,8 +415,8 @@
                 <label>
                   <span>Frame rate</span>
                   <div class="segmented-control" id="frameRateLimit">
-                    <button type="button" data-frame-rate="auto">Auto</button>
-                    <button type="button" data-frame-rate="60" class="is-active">60 FPS</button>
+                    <button type="button" data-frame-rate="auto" class="is-active">Auto</button>
+                    <button type="button" data-frame-rate="60">60 FPS</button>
                   </div>
                   <small class="control-help">Cap refresh when you want a steadier thermal budget.</small>
                 </label>

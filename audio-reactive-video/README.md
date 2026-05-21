@@ -38,6 +38,5 @@ npm run preview
 
 - `Spectral`: the main resonant field renderer, with WebGPU preferred and legacy fallback support.
 - `Crystal`: a dedicated WebGPU harmonic membrane renderer.
-- `Lattice`: a dedicated WebGPU projected spatial wireframe renderer.
 
-When WebGPU is unavailable, the dedicated `Crystal` and `Lattice` renderers may not display; `Spectral` has the broader fallback path.
+When WebGPU is unavailable, the dedicated `Crystal` renderer may not display; `Spectral` has the broader fallback path.
